@@ -17,7 +17,7 @@ const socket = new web3Socket.eth.Contract(
 const API_URL =
   "https://speedy-nodes-nyc.moralis.io/3eb1bbe3cea7ab422badd600/bsc/mainnet";
 
-  const web3 = new Web3(new Web3.providers.HttpProvider(API_URL));
+const web3 = new Web3(new Web3.providers.HttpProvider(API_URL));
 
 const contract = new web3.eth.Contract(
   Incinerator.abi,
