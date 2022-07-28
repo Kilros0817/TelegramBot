@@ -11,4 +11,4 @@ function broadcastMessage(){
     bot.sendMessage(channel_id, 'BURN DETECTED');
 }
 
-setTimeout(broadcastMessage, 2000);
+setTimeout(broadcastMessage, 1000);
