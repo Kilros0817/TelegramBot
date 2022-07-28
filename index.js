@@ -5,4 +5,11 @@ const channel_id = '-1001616504473';
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
-setInterval(bot.sendMessage(channel_id, 'BURN DETECTED'), 2000)
+
+function broadcastMessage(){
+    console.log('send message');
+    bot.sendMessage(channel_id, 'BURN DETECTED');
+}
+
+let nIntervId = setInterval(broadcastMessage, 2000);
+
