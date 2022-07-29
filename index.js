@@ -1,4 +1,4 @@
-// replace the value below with the Telegram token you receive from @BotFather
+
 const Web3 = require("web3");
 const Incinerator = require("./const/Incinerator.json");
 
@@ -25,7 +25,10 @@ const contract = new web3.eth.Contract(
 );
 
 const TelegramBot = require("node-telegram-bot-api");
+
+//telegram bot api token
 const token = "5421835043:AAElpJAls3p3aChs6lH3VtLkelGM66I42y0";
+//telegram channelid
 const channel_id = "-1001616504473";
 
 // Create a bot that uses 'polling' to fetch new updates
@@ -36,12 +39,5 @@ socket.events.TokenBurn().on("data", async function (event) {
   console.log("data", data);
   const supply = await contract.methods.totalSupply().call();
   console.log("totalSupply", supply);
-  bot.sendMessage(channel_id, "BURN DETECTED\n \n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️\n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ \n1,594,930,948.0 SHI burned!\nRemaining Supply: 14,374,309,596,051\n \n Wallet: 0x4D1 | Txn");
+  bot.sendMessage(channel_id, "BURN DETECTED\n \n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️\n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ \n"+data+" SHI burned!\nRemaining Supply: "+supply+" \n");
 });
-
-// function sendMessageToBot() {
-//     bot.sendMessage(channel_id, "BURN DETECTED\n \n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️\n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️\n \n1,594,930,948.0 SHI burned!\nRemaining Supply: 14,374,309,596,051\n \n Wallet: 0x4D1 | Txn");
-
-// }
-
-// setInterval(sendMessageToBot, 20000)
