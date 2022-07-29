@@ -36,5 +36,7 @@ socket.events.TokenBurn().on("data", async function (event) {
   console.log("data", data);
   const supply = await contract.methods.totalSupply().call();
   console.log("totalSupply", supply);
-  bot.sendMessage(channel_id, "BURN DETECTED");
+  bot.sendMessage(channel_id, "BURN DETECTED\n \n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️\n ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ \n1,594,930,948.0 SHI burned!\nRemaining Supply: 14,374,309,596,051\n \n Wallet: 0x4D1 | Txn");
 });
+
+
