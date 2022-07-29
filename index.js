@@ -3,7 +3,7 @@ const Web3 = require("web3");
 const Incinerator = require("./const/Incinerator.json");
 
 const socketProvider =
-  "wss://speedy-nodes-nyc.moralis.io/3eb1bbe3cea7ab422badd600/bsc/mainnet/ws";
+  "wss://bsc-mainnet.nodereal.io/ws/v1/64a9df0874fb4a93b9d0a3849de012d3";
 
 const web3Socket = new Web3(
   new Web3.providers.WebsocketProvider(socketProvider)
@@ -15,7 +15,7 @@ const socket = new web3Socket.eth.Contract(
 );
 
 const API_URL =
-  "https://speedy-nodes-nyc.moralis.io/3eb1bbe3cea7ab422badd600/bsc/mainnet";
+  "https://bsc-dataseed.binance.org/";
 
 const web3 = new Web3(new Web3.providers.HttpProvider(API_URL));
 
